@@ -1,0 +1,14 @@
+{% extends 'music/header.html' %}
+
+{% block a %}
+<h1> this is new html </h1>
+<ul>
+    {% for a in all_albums %}
+    <li>
+        <a href="{% url 'music:detail' a.id %}/">{{ a.singer }}
+
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
